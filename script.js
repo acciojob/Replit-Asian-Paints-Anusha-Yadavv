@@ -1,16 +1,22 @@
 //your JS code here. If required.
- function changeColor() {
+
+ function changeColor(id) {
         const blockId = document.getElementById("block_id").value;
         const color = document.getElementById("colour_id").value;
 
-        const blockElement = document.getElementById(blockId);
-        if (blockElement) {
+        if (blockId) {
             document.querySelectorAll('.grid-item').forEach(item => {
                 item.style.backgroundColor = 'transparent';
             });
-            blockElement.style.backgroundColor = color;
+
+            const blockElement = document.getElementById(id);
+            if (blockElement) {
+                blockElement.style.backgroundColor = color;
+            } else {
+                alert("Invalid Block ID");
+            }
         } else {
-            alert("Invalid Block ID");
+            alert("Please enter Block ID");
         }
     }
 
@@ -19,3 +25,4 @@
             item.style.backgroundColor = 'transparent';
         });
     }
+

@@ -15,9 +15,3 @@
             border: 1px solid #ccc;
             cursor: pointer;
         }
-
-        #change_button, #reset_button {
-            margin-top: 10px;
-            padding: 10px;
-            font-size: 16px;
-        }
